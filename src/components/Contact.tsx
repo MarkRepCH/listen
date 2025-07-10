@@ -181,9 +181,6 @@ const Contact = () => {
                 Sie sind Experte im Bereich nachhaltiger Energie oder haben eine 
                 spannende Geschichte zu erzählen? Wir freuen uns auf Ihre Einsendung!
               </p>
-              <button className="bg-[#FF463C] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#e63d34] transition-colors">
-                Kontaktieren Sie uns
-              </button>
             </div>
           </div>
         </div>
