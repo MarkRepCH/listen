@@ -15,7 +15,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-20 bg-[#FF463C]">
+    <section id="newsletter" className="py-20 bg-[#FF463C]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-8">
           <Mail size={64} className="text-white mx-auto mb-6" />

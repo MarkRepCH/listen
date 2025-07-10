@@ -49,10 +49,10 @@ const Header = () => {
               isScrolled ? 'text-white' : 'text-white'
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <a href="#newsletter" className="bg-[#FF463C] text-white px-6 py-2 rounded-full font-medium hover:bg-[#e63d34] transition-colors">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+          </a>
+          <a href="#newsletter" className="w-full bg-[#FF463C] text-white px-6 py-2 rounded-full font-medium hover:bg-[#e63d34] transition-colors text-center">
       </div>
 
       {/* Mobile Menu */}
@@ -71,7 +71,7 @@ const Header = () => {
             <button className="w-full bg-[#FF463C] text-white px-6 py-2 rounded-full font-medium hover:bg-[#e63d34] transition-colors">
               Abonnieren
             </button>
-          </div>
+          </a>
         </div>
       )}
     </header>

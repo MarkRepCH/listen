@@ -36,13 +36,13 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <button 
-            onClick={() => setIsPlaying(!isPlaying)}
+          <a 
+            href="#episodes"
             className="flex items-center space-x-3 bg-[#FF463C] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#e63d34] transition-all duration-300 transform hover:scale-105 shadow-xl"
           >
-            {isPlaying ? <Pause size={24} /> : <Play size={24} />}
-            <span>{isPlaying ? 'Pausieren' : 'Neueste Episode'}</span>
-          </button>
+            <Play size={24} />
+            <span>Neueste Episode</span>
+          </a>
 
 
           <button className="flex items-center space-x-3 bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition-all duration-300 border border-white/30">
