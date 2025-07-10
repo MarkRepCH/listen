@@ -39,9 +39,9 @@ const Header = () => {
             }`}>
               Kontakt
             </a>
-            <button className="bg-[#FF463C] text-white px-6 py-2 rounded-full font-medium hover:bg-[#e63d34] transition-colors">
+            <a href="#newsletter" className="bg-[#FF463C] text-white px-6 py-2 rounded-full font-medium hover:bg-[#e63d34] transition-colors">
               Abonnieren
-            </button>
+            </a>
           </nav>
 
           <button
@@ -68,9 +68,9 @@ const Header = () => {
             <a href="#contact" className="block text-gray-700 font-medium hover:text-[#FF463C]">
               Kontakt
             </a>
-            <button className="w-full bg-[#FF463C] text-white px-6 py-2 rounded-full font-medium hover:bg-[#e63d34] transition-colors">
+            <a href="#newsletter" className="w-full bg-[#FF463C] text-white px-6 py-2 rounded-full font-medium hover:bg-[#e63d34] transition-colors text-center">
               Abonnieren
-            </button>
+            </a>
           </div>
         </div>
       )}
