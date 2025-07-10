@@ -1,8 +1,38 @@
 import React, { useState } from 'react';
-import { Play, Pause, Download, Share2 } from 'lucide-react';
+import { Play, Pause, Download, Share2, Check } from 'lucide-react';
 
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isShared, setIsShared] = useState(false);
+
+  const handleShare = async () => {
+    const shareData = {
+      title: 'Fisching for Energy - Podcast über nachhaltige Energie',
+      text: 'Der führende deutschsprachige Podcast über nachhaltige Energie, Klimawandel und innovative Technologien für eine bessere Zukunft.',
+      url: window.location.href
+    };
+
+    try {
+      // Check if Web Share API is supported
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        // Fallback: Copy to clipboard
+        await navigator.clipboard.writeText(window.location.href);
+        setIsShared(true);
+        setTimeout(() => setIsShared(false), 2000);
+      }
+    } catch (error) {
+      // If sharing fails, try copying to clipboard
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        setIsShared(true);
+        setTimeout(() => setIsShared(false), 2000);
+      } catch (clipboardError) {
+        console.error('Sharing failed:', error, clipboardError);
+      }
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -45,9 +75,12 @@ const Hero = () => {
           </a>
 
 
-          <button className="flex items-center space-x-3 bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition-all duration-300 border border-white/30">
-            <Share2 size={20} />
-            <span>Teilen</span>
+          <button 
+            onClick={handleShare}
+            className="flex items-center space-x-3 bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition-all duration-300 border border-white/30"
+          >
+            {isShared ? <Check size={20} /> : <Share2 size={20} />}
+            <span>{isShared ? 'Kopiert!' : 'Teilen'}</span>
           </button>
         </div>
 
