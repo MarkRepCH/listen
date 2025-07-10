@@ -133,7 +133,6 @@ const Contact = () => {
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">E-Mail</h4>
                   <p className="text-gray-600">kontakt@fisching-for-energy.ch</p>
-                  <p className="text-gray-600">redaktion@fisching-for-energy.ch</p>
                 </div>
               </div>
 
