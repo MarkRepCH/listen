@@ -59,13 +59,13 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="px-4 py-6 space-y-4">
-            <a href="#about" className="block text-gray-700 font-medium hover:text-[#FF463C]">
+            <a href="#about" className="block text-white font-medium hover:text-[#FF463C]">
               Über uns
             </a>
-            <a href="#episodes" className="block text-gray-700 font-medium hover:text-[#FF463C]">
+            <a href="#episodes" className="block text-white font-medium hover:text-[#FF463C]">
               Episoden
             </a>
-            <a href="#contact" className="block text-gray-700 font-medium hover:text-[#FF463C]">
+            <a href="#contact" className="block text-white font-medium hover:text-[#FF463C]">
               Kontakt
             </a>
             <a href="#newsletter" className="w-full bg-[#FF463C] text-white px-6 py-2 rounded-full font-medium hover:bg-[#e63d34] transition-colors text-center">
