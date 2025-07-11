@@ -25,17 +25,17 @@ const Header = () => {
 
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#about" className={`font-medium transition-colors hover:text-[#FF463C] ${
-              isScrolled ? 'text-gray-700' : 'text-white'
+              isScrolled ? 'text-white' : 'text-white'
             }`}>
               Über uns
             </a>
             <a href="#episodes" className={`font-medium transition-colors hover:text-[#FF463C] ${
-              isScrolled ? 'text-gray-700' : 'text-white'
+              isScrolled ? 'text-white' : 'text-white'
             }`}>
               Episoden
             </a>
             <a href="#contact" className={`font-medium transition-colors hover:text-[#FF463C] ${
-              isScrolled ? 'text-gray-700' : 'text-white'
+              isScrolled ? 'text-white' : 'text-white'
             }`}>
               Kontakt
             </a>
