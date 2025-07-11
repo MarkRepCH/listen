@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Clock, Calendar, Download, Heart } from 'lucide-react';
+import { Play, Clock, Calendar, Download, Heart, FileText } from 'lucide-react';
 
 const Episodes = () => {
   const [likedEpisodes, setLikedEpisodes] = useState<number[]>([]);
@@ -146,6 +146,14 @@ const Episodes = () => {
                       <button className="p-2 rounded-full text-gray-400 hover:text-[#FF463C] hover:bg-gray-100 transition-colors">
                         <Download size={20} />
                       </button>
+                      
+                      <a 
+                        href={`/transcript/${episode.id}`}
+                        className="p-2 rounded-full text-gray-400 hover:text-[#FF463C] hover:bg-gray-100 transition-colors"
+                        title="Transkript anzeigen"
+                      >
+                        <FileText size={20} />
+                      </a>
                       
                       <button className="bg-[#FF463C] text-white px-6 py-2 rounded-full font-medium hover:bg-[#e63d34] transition-colors">
                         Anhören
