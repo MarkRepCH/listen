@@ -34,6 +34,11 @@ const Header = () => {
             }`}>
               Episoden
             </a>
+            <a href="#community" className={`font-medium transition-colors hover:text-[#FF463C] ${
+              isScrolled ? 'text-white' : 'text-white'
+            }`}>
+              Community
+            </a>
             <a href="#contact" className={`font-medium transition-colors hover:text-[#FF463C] ${
               isScrolled ? 'text-white' : 'text-white'
             }`}>
@@ -64,6 +69,9 @@ const Header = () => {
             </a>
             <a href="#episodes" className="block text-white font-medium hover:text-[#FF463C]">
               Episoden
+            </a>
+            <a href="#community" className="block text-white font-medium hover:text-[#FF463C]">
+              Community
             </a>
             <a href="#contact" className="block text-white font-medium hover:text-[#FF463C]">
               Kontakt
