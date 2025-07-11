@@ -8,7 +8,15 @@ const Community = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (question.trim() && email.trim()) {
+    if (question.trim()) {
+      // In einer echten Anwendung würde hier eine API-Anfrage gesendet werden
+      console.log('Frage eingereicht:', {
+        question: question.trim(),
+        email: email.trim() || 'Anonym',
+        timestamp: new Date().toISOString(),
+        guestName: upcomingGuest.name
+      });
+      
       setIsSubmitted(true);
       setQuestion('');
       setEmail('');
@@ -185,17 +193,19 @@ const Community = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Ihre E-Mail-Adresse *
+                      Ihre E-Mail-Adresse (optional)
                     </label>
                     <input
                       type="email"
                       id="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF463C] focus:border-transparent transition-colors"
                       placeholder="ihre.email@beispiel.com"
                     />
+                    <p className="text-xs text-gray-500 mt-1">
+                      Optional: Für Rückfragen oder Updates zur Episode
+                    </p>
                   </div>
                   <div className="flex items-end">
                     <div className="bg-gray-50 rounded-lg p-4 w-full">
