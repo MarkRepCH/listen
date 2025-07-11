@@ -163,6 +163,32 @@ const Episodes = () => {
             Alle Episoden anzeigen
           </button>
         </div>
+
+        {/* Spotify Integration */}
+        <div className="mt-20">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Hören Sie uns auf Spotify
+            </h3>
+            <p className="text-lg text-gray-600">
+              Alle Episoden sind auch direkt auf Spotify verfügbar
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <iframe 
+              style={{borderRadius: '12px'}} 
+              src="https://open.spotify.com/embed/playlist/6ZV7Fit84TutFx6Oo3t873?utm_source=generator" 
+              width="100%" 
+              height="370" 
+              frameBorder="0" 
+              allowFullScreen 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy"
+              className="shadow-2xl"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
